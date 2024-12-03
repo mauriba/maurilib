@@ -1,0 +1,12 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+# Include the targets file
+include("${CMAKE_CURRENT_LIST_DIR}/maurilibTargets.cmake")
+
+# Make sure the include directories are accessible
+set(maurilib_INCLUDE_DIRS "@CMAKE_INSTALL_PREFIX@/include")
+
+# Provide variables for use by external projects
+set(maurilib_LIBRARIES mauri::math) # Add more targets if needed
