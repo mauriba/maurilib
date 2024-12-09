@@ -5,6 +5,9 @@ project(maurilib
     VERSION 0.0.0
 )
 
+# Needed for Visual Studio to generate .lib aka DLL loader files
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+
 # Allows Clangd LSP to understand include directories for this project
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
